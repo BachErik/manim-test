@@ -7,14 +7,24 @@
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.python311
-    pkgs.python311Packages.manim
+    pkgs.python311Packages.pip
     pkgs.docker
+    pkgs.python312Packages.pyopengl
+    pkgs.ffmpeg-full
+    pkgs.python311Packages.manimpango
+    pkgs.python311Packages.wheel
+    pkgs.gcc
+    pkgs.pkg-config
+    pkgs.pango
+    pkgs.cairo
   ];
 
   services.docker.enable = true;
 
   # Sets environment variables in the workspace
-  env = {};
+  env = {
+    PKG_CONFIG_PATH = "${pkgs.pango}/lib/pkgconfig";
+  };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -49,6 +59,7 @@
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
+        # command = "pip install manimgl";
       };
     };
   };
