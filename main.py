@@ -8,23 +8,23 @@ class Aufgabe9Berechnung(Scene):
         self.wait(2)
         
         # Schritt 2: Reaktionsgleichung darstellen
-        reaktionsgleichung = Tex("Be + S \\rightarrow BeS").scale(0.9).next_to(aufgabe_text, DOWN)
+        reaktionsgleichung = Tex(r"$\text{Be} + \text{S} \rightarrow \text{BeS}$").scale(0.9).next_to(aufgabe_text, DOWN)
         self.play(Write(reaktionsgleichung))
         self.wait(2)
 
         # Schritt 3: Atommasse von Beryllium erklären
-        mol_berechnung = Tex("1 Mol Beryllium (Be) = 9{,}01 \\text{ g}").scale(0.8).next_to(reaktionsgleichung, DOWN)
+        mol_berechnung = Tex(r"$1 \text{ Mol Beryllium (Be)} = 9{,}01 \text{ g}$").scale(0.8).next_to(reaktionsgleichung, DOWN)
         self.play(Write(mol_berechnung))
         self.wait(2)
         
         # Schritt 4: Beryllium-Menge berechnen
-        beryllium_menge = Tex("90 \\text{ g} \\text{ Beryllium} \\Rightarrow \\frac{90}{9{,}01} = 9{,}99 \\text{ mol}").scale(0.8).next_to(mol_berechnung, DOWN)
+        beryllium_menge = Tex(r"$90 \, \text{g Beryllium} \Rightarrow \frac{90}{9{,}01} = 9{,}99 \, \text{mol}$").scale(0.8).next_to(mol_berechnung, DOWN)
         self.play(Write(beryllium_menge))
         self.wait(2)
 
         # Schritt 5: Schwefel-Bedarf berechnen
-        schwefel_bedarf = Tex("1 Mol Schwefel (S) = 32{,}07 \\text{ g}").scale(0.8).next_to(beryllium_menge, DOWN)
-        schwefel_bedarf_menge = Tex("9{,}99 \\text{ mol S} \\times 32{,}07 = 320{,}37 \\text{ g Schwefel}").scale(0.8).next_to(schwefel_bedarf, DOWN)
+        schwefel_bedarf = Tex(r"$1 \text{ Mol Schwefel (S)} = 32{,}07 \text{ g}$").scale(0.8).next_to(beryllium_menge, DOWN)
+        schwefel_bedarf_menge = Tex(r"$9{,}99 \, \text{mol S} \times 32{,}07 = 320{,}37 \, \text{g Schwefel}$").scale(0.8).next_to(schwefel_bedarf, DOWN)
         self.play(Write(schwefel_bedarf))
         self.play(Write(schwefel_bedarf_menge))
         self.wait(2)
