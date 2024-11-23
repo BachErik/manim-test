@@ -1,4 +1,4 @@
-from manimgl import *
+from manim import *
 
 class Aufgabe9Berechnung(Scene):
     def construct(self):

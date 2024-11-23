@@ -6,17 +6,8 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.python311
-    pkgs.python311Packages.pip
-    pkgs.docker
-    pkgs.python312Packages.pyopengl
-    pkgs.ffmpeg-full
-    pkgs.python311Packages.manimpango
-    pkgs.python311Packages.wheel
-    pkgs.gcc
-    pkgs.pkg-config
-    pkgs.pango
-    pkgs.cairo
+    pkgs.python312Full
+    pkgs.python312Packages.manim
   ];
 
   services.docker.enable = true;
@@ -29,6 +20,9 @@
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
       # "vscodevim.vim"
+      "ms-python.debugpy"
+      "ms-python.pylint"
+      "ms-python.python"
     ];
 
     # Enable previews
